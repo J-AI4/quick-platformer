@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var speed = 200
-var jump_force = -400
-var gravity = 900
+var speed = 800
+var jump_force = -1200
+var gravity = 1000
 
 func _physics_process(delta):
 	if not is_on_floor():
