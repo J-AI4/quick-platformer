@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyt5x5mdi488j"]
+
+[ext_resource type="Texture2D" uid="uid://bg44ufrdeau3j" path="res://ground_tile.png" id="1_3hls8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
+texture = ExtResource("1_3hls8")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hn12h"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_hbghi")
+
+[node name="Level1" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hn12h")
+format = 2

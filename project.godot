@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Quick Platformer"
-run/main_scene="uid://ioo1toslxw67"
+run/main_scene="uid://dyt5x5mdi488j"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
