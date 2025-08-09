@@ -1,7 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyt5x5mdi488j"]
+[gd_scene load_steps=15 format=3 uid="uid://dyt5x5mdi488j"]
 
 [ext_resource type="Texture2D" uid="uid://bg44ufrdeau3j" path="res://ground_tile.png" id="1_3hls8"]
+[ext_resource type="Texture2D" uid="uid://b7rb2ggh8cyf4" path="res://galaxy_background.jpg" id="1_hn12h"]
 [ext_resource type="PackedScene" uid="uid://ioo1toslxw67" path="res://Player/player.tscn" id="2_hbghi"]
+[ext_resource type="Texture2D" uid="uid://cgwjv18t7qfpe" path="res://Restart.png" id="4_rka8t"]
+[ext_resource type="Script" uid="uid://cprknaj78ktli" path="res://button.gd" id="5_5hph3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hls8"]
 texture = ExtResource("1_3hls8")
@@ -38,6 +41,11 @@ b = Vector2(4066, -2050)
 
 [node name="Level1" type="Node2D"]
 position = Vector2(1, 0)
+
+[node name="galaxy_background" type="Sprite2D" parent="."]
+position = Vector2(-11.75, 66.25)
+scale = Vector2(7.24583, 3.33963)
+texture = ExtResource("1_hn12h")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_hn12h")
@@ -142,3 +150,13 @@ shape = SubResource("SegmentShape2D_hn12h")
 
 [node name="Player" parent="." instance=ExtResource("2_hbghi")]
 position = Vector2(-3734, 148)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -325.0
+offset_top = -2055.0
+offset_right = 323.0
+offset_bottom = -1727.0
+icon = ExtResource("4_rka8t")
+script = ExtResource("5_5hph3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
