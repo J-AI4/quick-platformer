@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyt5x5mdi488j"]
+[gd_scene load_steps=16 format=3 uid="uid://dyt5x5mdi488j"]
 
 [ext_resource type="Texture2D" uid="uid://bg44ufrdeau3j" path="res://ground_tile.png" id="1_3hls8"]
-[ext_resource type="Texture2D" uid="uid://b7rb2ggh8cyf4" path="res://galaxy_background.jpg" id="1_hn12h"]
+[ext_resource type="Texture2D" uid="uid://c7p6ghnt71kjp" path="res://light_checker_bg.png" id="1_5hph3"]
 [ext_resource type="PackedScene" uid="uid://ioo1toslxw67" path="res://Player/player.tscn" id="2_hbghi"]
 [ext_resource type="Texture2D" uid="uid://cgwjv18t7qfpe" path="res://Restart.png" id="4_rka8t"]
 [ext_resource type="Script" uid="uid://cprknaj78ktli" path="res://button.gd" id="5_5hph3"]
+[ext_resource type="PackedScene" uid="uid://cdnqpcyfiewob" path="res://Collectibles/bamboo.tscn" id="6_5hph3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hls8"]
 texture = ExtResource("1_3hls8")
@@ -36,16 +37,16 @@ a = Vector2(-2963, -2033)
 b = Vector2(-2963, 2287)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hn12h"]
-a = Vector2(-3614, -2050)
+a = Vector2(-3564, -2039)
 b = Vector2(4066, -2050)
 
 [node name="Level1" type="Node2D"]
 position = Vector2(1, 0)
 
-[node name="galaxy_background" type="Sprite2D" parent="."]
-position = Vector2(-11.75, 66.25)
-scale = Vector2(7.24583, 3.33963)
-texture = ExtResource("1_hn12h")
+[node name="checker_background" type="Sprite2D" parent="."]
+position = Vector2(4.50011, 111)
+scale = Vector2(10.2799, 10.1607)
+texture = ExtResource("1_5hph3")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_hn12h")
@@ -141,7 +142,7 @@ position = Vector2(6803, -47)
 shape = SubResource("SegmentShape2D_hbghi")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-226, -30)
+position = Vector2(-276, -41)
 shape = SubResource("SegmentShape2D_hn12h")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D"]
@@ -158,5 +159,152 @@ offset_right = 323.0
 offset_bottom = -1727.0
 icon = ExtResource("4_rka8t")
 script = ExtResource("5_5hph3")
+
+[node name="Bamboo" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3361, 1754)
+
+[node name="Bamboo49" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3670, 1758)
+
+[node name="Bamboo2" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3045, 1757)
+
+[node name="Bamboo3" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2718, 1752)
+
+[node name="Bamboo5" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2078, 1761)
+
+[node name="Bamboo4" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2404, 1757)
+
+[node name="Bamboo6" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1753, 1435)
+
+[node name="Bamboo7" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1431, 1432)
+
+[node name="Bamboo8" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1109, 1121)
+
+[node name="Bamboo9" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-487, 792)
+
+[node name="Bamboo10" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-150, 787)
+
+[node name="Bamboo11" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(159, 797)
+
+[node name="Bamboo12" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(489, 158)
+
+[node name="Bamboo13" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(807, 163)
+
+[node name="Bamboo14" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(1114, 161)
+
+[node name="Bamboo15" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(1767, -502)
+
+[node name="Bamboo16" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2082, -487)
+
+[node name="Bamboo17" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2417, -482)
+
+[node name="Bamboo18" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3040, -1123)
+
+[node name="Bamboo19" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3371, -1139)
+
+[node name="Bamboo20" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3683, -1125)
+
+[node name="Bamboo21" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3680, -1768)
+
+[node name="Bamboo22" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(1456, -1118)
+
+[node name="Bamboo23" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(1132, -1124)
+
+[node name="Bamboo24" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(819, -1113)
+
+[node name="Bamboo25" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(176, -796)
+
+[node name="Bamboo26" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-138, -479)
+
+[node name="Bamboo27" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-471, -473)
+
+[node name="Bamboo28" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1086, -793)
+
+[node name="Bamboo29" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1409, -796)
+
+[node name="Bamboo30" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-1742, -1116)
+
+[node name="Bamboo31" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2050, -1116)
+
+[node name="Bamboo32" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2369, -1120)
+
+[node name="Bamboo33" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-2703, -1120)
+
+[node name="Bamboo34" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3022, -1113)
+
+[node name="Bamboo35" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3344, -1118)
+
+[node name="Bamboo36" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3677, -1111)
+
+[node name="Bamboo37" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3681, -1768)
+
+[node name="Bamboo38" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3351, -1768)
+
+[node name="Bamboo39" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(-3032, -1764)
+
+[node name="Bamboo40" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2730, 163)
+
+[node name="Bamboo41" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3683, 163)
+
+[node name="Bamboo42" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(1752, 1437)
+
+[node name="Bamboo43" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2076, 1448)
+
+[node name="Bamboo44" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2423, 1755)
+
+[node name="Bamboo45" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(2726, 1759)
+
+[node name="Bamboo46" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3041, 1756)
+
+[node name="Bamboo47" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3360, 1765)
+
+[node name="Bamboo48" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(3673, 1764)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -4,6 +4,9 @@ var speed = 800
 var jump_force = -2500
 var gravity = 5000
 
+func _ready():
+	add_to_group("player")
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
